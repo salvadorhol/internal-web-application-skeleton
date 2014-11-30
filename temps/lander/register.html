@@ -1,0 +1,19 @@
+<center> <a href="#" class="glyphicon glyphicon-chevron-left"></a> back to login</center>
+
+<!--Register form-->
+<form name ="register" id="register" style="margin-top: 5px">
+  <div class="form-group">
+    <input type="email" class="form-control" ng-model="user.email" placeholder="Email" required>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" ng-model="user.password" placeholder="Password" required>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" ng-model="user.v_password" placeholder="Verify your password" required>
+  </div>
+ 
+  <center> <button type="button" class="btn btn-lg btn-primary" ng-disabled="register.$invalid || !(user.password == user.v_password)"  ng-click="reg()">Register</button> </center>
+</form>
+
+<hr>
+<center> <p class="primary">{{result}}</p> </center>

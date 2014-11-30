@@ -1,0 +1,13 @@
+ <!--Log in form-->
+<form name="login" ng-submit="connect()" >
+	<div class="form-group">
+	  <input type="text" class="form-control" id="email" placeholder="email" ng-model="user.email" required>
+	</div>
+	<div class="form-group">
+	  <input type="password" class="form-control" id="password" placeholder="Password" ng-model="user.password" required>
+	</div>
+	 <center><button type="submit" class="btn btn-lg btn-success" ng-disabled="login.$invalid" > Log in</button> <a class="btn btn-lg btn-primary" href="#register" role="button">Register</a></center>
+</form>
+
+<hr>
+<center> <p class="primary">{{result}}</p> </center>
